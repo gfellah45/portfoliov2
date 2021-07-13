@@ -13,8 +13,8 @@ const Hero: React.FC = () => {
         I love building things for the web
       </p>
       <p className="w-full my-4 space-x-3 text-2xl font-medium tracking-wider text-gray-500 md:w-11/12 lg:text-3xl lg:w-8/12 xl:w-7/12 dark:text-gray-400">
-        I'm a Nigerian base software developer who enjoys building exceptional
-        digital experiences. Currently, I'm an engineer at{" "}
+        I&#39;m a Nigerian base software developer who enjoys building
+        exceptional digital experiences. Currently, I&#39;m an engineer at{" "}
         <span className="inline-block font-bold text-light-bg2">
           <a
             href="http://everyfarmer.farm"
