@@ -5,14 +5,17 @@ import Title from "./Hero/Title";
 
 const Landing: React.FC = () => {
   return (
-    <div className="relative " style={{ minHeight: "89vh" }}>
-      <div className="pt-14 lg:pt-20">
+    <div
+      className="flex flex-col flex-wrap justify-between "
+      style={{ minHeight: "90vh" }}
+    >
+      <div className="pt-20 lg:pt-20">
         <Container>
           <Title />
         </Container>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-28">
+      <div className="w-full h-36">
         <Contact />
       </div>
     </div>
