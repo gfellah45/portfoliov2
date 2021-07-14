@@ -1,22 +1,21 @@
 import React from "react";
 import Container from "../Container";
 import Contact from "./Hero/Contact";
-import Header from "./header/Header";
 import Title from "./Hero/Title";
 
 const Landing: React.FC = () => {
   return (
-    <>
-      <Container>
-        {/* <div>
-          <Header />
-        </div> */}
-        <div className="min-w-full mt-28 h-4/6">
+    <div className="relative " style={{ minHeight: "89vh" }}>
+      <div className="pt-14 lg:pt-20">
+        <Container>
           <Title />
-        </div>
-      </Container>
-      <Contact />
-    </>
+        </Container>
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-28">
+        <Contact />
+      </div>
+    </div>
   );
 };
 
