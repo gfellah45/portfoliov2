@@ -106,3 +106,70 @@ export const listMobile = {
     },
   }),
 };
+
+export const fadeUp = {
+  initial: {
+    opacity: 0,
+    translateY: "30px",
+  },
+  animate: {
+    opacity: 1,
+    translateY: "0px",
+  },
+};
+
+// export const container = {
+//   initial: {
+//     opacity: 0,
+//   },
+//   animate: {
+//     opacacity: 1,
+//     transition: {
+//       staggerChildren: 0.5,
+//     },
+//   },
+// };
+
+export const container = {
+  hidden: {
+    opacity: 0,
+    translateY: "30px",
+  },
+  show: {
+    opacity: 1,
+    translateY: "0px",
+    transition: {
+      delay: 1.3,
+      staggerChildren: 0.3,
+      staggerDirection: -1,
+      delayChildren: 0.6,
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
+export const item = {
+  hidden: { opacity: 0, translateY: "30px" },
+  show: {
+    opacity: 1,
+    translateY: "0px",
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
+export const width = {
+  hidden: { opacity: 0, height: 0 },
+  show: {
+    opacity: 1,
+    height: "100%",
+    transition: {
+      type: "spring",
+      duration: 2,
+      delay: 1.6,
+    },
+  },
+};
