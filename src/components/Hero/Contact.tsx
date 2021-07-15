@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Linkden currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+              <Github currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
             </a>
           </motion.div>
 
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Github currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+              <Linkden currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
             </a>
           </motion.div>
         </motion.div>
