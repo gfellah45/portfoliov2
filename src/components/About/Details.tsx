@@ -194,7 +194,7 @@ const Details: React.FC = () => {
               the web. My interest in programing started back in 2015 when I
               took a C++ course in school. Fastrack 2018 i developed intrest in
               web developmet after attending a local meet up. Fast-forward to
-              today, I've had the privilege of working at an Agric Tech
+              today, I&apos;ve had the privilege of working at an Agric Tech
               start-up, Health Startup. I also interned with Devcareer Bootcamp,
               HNG internship, UK-Nigeria Tech-Hub | Decagon Dev Plecement
               Internship. My main focus these days is building accessible,
