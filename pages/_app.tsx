@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import useLocalStorage from "../hooks/useLocalStorage";
 import Header from "../src/components/header/Header";
 import Container from "../src/Container";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLightTheme] = useLocalStorage("lightTheme", true);
   return (

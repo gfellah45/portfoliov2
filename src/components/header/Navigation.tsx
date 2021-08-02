@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
             initial="initial"
             animate="animate"
             key={idx}
-            className={`text-text-heading2 dark:text-dark-text1 text-lg font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
+            className={`text-text-heading2 hover:text-light-bg2 dark:text-dark-text1 text-lg font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
           >
             <a href={item.tag}>{item.item}</a>
           </motion.li>

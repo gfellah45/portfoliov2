@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { container, fadeUp, item } from "../Animations/index";
+import { container, item } from "../Animations/index";
 const Hero: React.FC = () => {
   return (
     <motion.div

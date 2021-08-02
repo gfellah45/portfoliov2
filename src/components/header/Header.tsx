@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   const [isLightTheme] = useLocalStorage("lightTheme", true);
 
   return (
-    <header className="flex flex-wrap justify-between p-4">
+    <header className="flex flex-wrap justify-between py-4">
       {/* logo */}
       <motion.div
         initial={{ translateX: "-100px" }}

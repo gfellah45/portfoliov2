@@ -44,10 +44,10 @@ const Overlay: React.FC<Props> = ({ toggle, handleCollapse }) => {
       initial={{ x: "-100vw" }}
       variants={overLay}
       animate={toggle ? "open" : "close"}
-      className="fixed top-0 bottom-0 left-0 z-50 w-6/12 h-screen "
+      className="fixed top-0 bottom-0 left-0 z-50 w-3/12 h-screen "
       onClick={() => handleCollapse()}
     >
-      <div className="w-full h-full text-3xl bg-light-bg2 dark:bg-dark-text1">
+      <div className="w-full h-full text-3xl rounded-r-3xl bg-light-bg2 dark:bg-dark-text1">
         <nav className="items-center justify-around py-28 lg:py-0 lg:flex-row xl:flex-row lg:justify-between xl:justify-between h-5/6 lg:h-full xl:h-full">
           <motion.ul
             variants={container}

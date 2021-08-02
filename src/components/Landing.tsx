@@ -1,23 +1,28 @@
 import React from "react";
 import Container from "../Container";
+import Details from "./About/Details";
 import Contact from "./Hero/Contact";
 import Title from "./Hero/Title";
 
 const Landing: React.FC = () => {
   return (
-    <div
-      className="flex flex-col flex-wrap justify-between "
-      style={{ minHeight: "90vh" }}
-    >
-      <div className="pt-20 lg:pt-20">
-        <Container>
-          <Title />
-        </Container>
+    <div>
+      <div
+        className="flex flex-col flex-wrap justify-between min-h-[80vh] lg:min-h-[90vh] "
+        // style={{ minHeight: "90vh" }}
+      >
+        <div className="pt-20 lg:pt-20">
+          <Container>
+            <Title />
+          </Container>
+        </div>
+
+        <div className="w-full h-36">
+          <Contact />
+        </div>
       </div>
 
-      <div className="w-full h-36">
-        <Contact />
-      </div>
+      <Details />
     </div>
   );
 };
