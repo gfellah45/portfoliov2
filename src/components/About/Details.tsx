@@ -182,13 +182,13 @@ const Details: React.FC = () => {
       {/* image and about description */}
 
       <Container>
-        <div className="flex flex-col-reverse flex-wrap w-full py-6 lg:flex-row ">
+        <div className="flex flex-col-reverse flex-wrap w-full py-6 text-justify lg:flex-row ">
           <div className="flex items-center justify-center w-full lg:w-6/12">
             <motion.p
               ref={ref6}
               variants={textVariant}
               animate={inView6 ? "animate" : "initial"}
-              className="w-11/12 md:w-9/12 py-4 md:text-justify lg:w-10/12 text-[8px] md:text-sm font-medium leading-7 lg:leading-8 lg:text-sm dark:text-light-bg3 lg:text-justify text-light-text1"
+              className="w-11/12 md:w-9/12 py-4 md:text-justify lg:w-10/12 text-[10px] md:text-sm font-medium leading-7 lg:leading-8 lg:text-sm dark:text-light-bg3 lg:text-justify text-light-text1"
             >
               Hello! My name is Jerry and I enjoy creating things that live on
               the web. My interest in programing started back in 2015 when I
@@ -226,7 +226,7 @@ const Details: React.FC = () => {
       </Container>
 
       {/* below list of technologies */}
-      <div className="w-full h-40 lg:h-36 bg-light-bg2 dark:bg-dark-text1">
+      <div className="w-full h-48 lg:h-36 bg-light-bg2 dark:bg-dark-text1">
         <Container>
           <motion.div className="w-full h-8 my-5 lg:h-24">
             <motion.p
@@ -246,43 +246,43 @@ const Details: React.FC = () => {
               >
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Javascript(ES6+)
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Reactjs / React Native
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nextjs
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nodejs
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   HTML5
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   CSS3
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[8px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[9px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Chakra UI / TailwindCSS / Bootstrap
                 </motion.div>
