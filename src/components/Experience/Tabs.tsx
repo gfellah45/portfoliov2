@@ -2,45 +2,20 @@ import React, { FC, useState } from "react";
 import { Tab, Transition } from "@headlessui/react";
 import { classNames } from "../../utils";
 import Card from "./Card";
-const Tabs: FC = () => {
-  const [experience] = useState<object>({
-    Everyfarmer: [
-      {
-        id: "1",
-        title: "Frontend Engineer @ Everyfarmer",
-        duration: "January 2021 - Date",
-        duties: [
-          "Write modern, performant, and maintainable codes for internal projects.",
-          "Work with languages, frameworks, and technologies such as JavaScript, React, Nextjs, Chakra Ui, Redux, Html5 and Css3.",
-          "Interfaced with managment, providing technological expertise.",
-        ],
-      },
-    ],
-    Livrite: [
-      {
-        id: "1",
-        title: "Frontend Engineer @ Livrite healthcare",
-        duration: "January 2021 - Date",
-        duties: [
-          "Write modern, performant, and maintainable codes for internal projects.",
-          "Work with languages, frameworks, and technologies such as JavaScript, React, Nextjs, Chakra Ui, Redux, Html5 and Css3.",
-          "Interfaced with managment, providing technological expertise.",
-        ],
-      },
-    ],
-  });
+import { experinces } from "../data";
 
+const Tabs: FC = () => {
   return (
     <>
       <Tab.Group>
         <div className="flex flex-col flex-wrap lg:flex-row">
-          <Tab.List className="flex flex-row w-2/12 lg:flex-col">
-            {Object.keys(experience).map((item, idx) => {
+          <Tab.List className="flex flex-row w-10/12 mx-auto md:w-6/12 md:mx-auto md:p-2 lg:w-2/12 lg:flex-col">
+            {Object.keys(experinces).map((item, idx) => {
               return (
                 <Tab
                   className={({ selected }) =>
                     classNames(
-                      "flex flex-col mb-2 p-2 dark:text-dark-bg md:text-md w-12/12 md:p-4 lg:p-3 text-xs lg:text-[14px] text-light-bg3 focus:outline-none",
+                      "flex flex-col mb-2  p-2 dark:text-dark-bg md:text-md w-12/12 md:p-2 lg:p-3 text-sm lg:text-[14px] text-light-bg3 focus:outline-none",
                       selected
                         ? "bg-white dark:bg-dark-bg dark:text-white   backdrop-blur-lg backdrop-filter bg-opacity-20 font-semibold shadow-lg rounded-2xl "
                         : " hover:bg-white/[0.11] hover:text-white hover:shadow-lg hover:rounded-2xl"
@@ -54,7 +29,7 @@ const Tabs: FC = () => {
             })}
           </Tab.List>
           <Tab.Panels className="w-full lg:w-10/12">
-            {Object.values(experience)
+            {Object.values(experinces)
               .flat()
               .map((item: any, idx: number) => {
                 return (

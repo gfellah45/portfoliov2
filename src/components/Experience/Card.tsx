@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ title, duration, duties }) => {
   return (
-    <div className="w-full p-4 my-3 bg-white border-b border-gray-200 dark:bg-dark-bg rounded-2xl lg:my-0 bg-opacity-20 backdrop-filter backdrop-blur-lg">
+    <div className="w-full p-4 my-3 origin-center bg-white border-b border-gray-200 transform-gpu dark:bg-dark-bg rounded-2xl lg:my-0 bg-opacity-20 backdrop-filter backdrop-blur-lg">
       <div>
         <span className="text-sm text-white lg:text-lg">
           {title.substr(0, title.lastIndexOf("@"))}

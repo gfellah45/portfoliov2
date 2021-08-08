@@ -115,6 +115,11 @@ export const fadeUp = {
   animate: {
     opacity: 1,
     translateY: "0px",
+    transition: {
+      type: "spring",
+      duration: 1,
+      delay: 0.5,
+    },
   },
 };
 
@@ -201,6 +206,22 @@ export const lineWidth = {
     transition: {
       delay: 1.3,
       type: "spring",
+      duration: 2,
+    },
+  },
+};
+
+export const bounceIn = {
+  initial: {
+    opacity: 0,
+    translateY: "80px",
+  },
+  animate: {
+    opacity: 1,
+    translateY: "0px",
+    transition: {
+      type: "spring",
+
       duration: 2,
     },
   },

@@ -1,13 +1,15 @@
 import React, { FC } from "react";
 import Heading from "../Elements/Heading";
 import { useInView } from "react-intersection-observer";
-import { nameV, lineWidth } from "../Animations";
+import { nameV, lineWidth, fadeUp } from "../Animations";
 import Container from "../../Container";
 import Tabs from "./Tabs";
+import { motion } from "framer-motion";
 
 const Experience: FC = () => {
   const { ref, inView } = useInView();
   const { ref: ref2, inView: inView2 } = useInView();
+  const { ref: ref3, inView: inView3 } = useInView();
 
   return (
     <div
@@ -31,9 +33,14 @@ const Experience: FC = () => {
       />
       <div className="my-12 dark:bg-dark-text1 bg-light-bg2">
         <Container>
-          <div className="py-6 lg:py-16">
+          <motion.div
+            ref={ref3}
+            variants={fadeUp}
+            animate={inView3 ? "animate" : "initial"}
+            className="py-6 lg:py-16"
+          >
             <Tabs />
-          </div>
+          </motion.div>
         </Container>
       </div>
     </div>
