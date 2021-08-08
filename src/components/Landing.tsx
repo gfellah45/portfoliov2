@@ -3,6 +3,7 @@ import Container from "../Container";
 import Details from "./About/Details";
 import Contact from "./Hero/Contact";
 import Title from "./Hero/Title";
+import Experience from "./Experience/Experience";
 
 const Landing: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Landing: React.FC = () => {
       </div>
 
       <Details />
+      <Experience />
     </div>
   );
 };

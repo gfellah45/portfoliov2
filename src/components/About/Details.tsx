@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Container from "../../Container";
 import { useViewportScroll, motion, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { container } from "../Animations";
+import { container, lineWidth, nameV } from "../Animations";
+import Heading from "../Elements/Heading";
 
 const Details: React.FC = () => {
   const [hover, setHover] = useState<Boolean>(false);
 
-  console.log(hover, "please just hober abeg");
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -31,38 +31,6 @@ const Details: React.FC = () => {
   const { ref: ref6, inView: inView6 } = useInView({
     threshold: 0.7,
   });
-
-  const nameV = {
-    initial: {
-      opacity: 0,
-      translateY: "70px",
-    },
-    animate: {
-      opacity: 1,
-      translateY: "0px",
-      transition: {
-        delay: 1,
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-  };
-
-  const lineWidth = {
-    initial: {
-      opacity: 0,
-      width: 0,
-    },
-    animate: {
-      opacity: 1,
-      width: "50%",
-      transition: {
-        delay: 1.3,
-        type: "spring",
-        duration: 2,
-      },
-    },
-  };
 
   const container2 = {
     initial: {
@@ -152,31 +120,21 @@ const Details: React.FC = () => {
       className="flex flex-col flex-wrap justify-between w-full min-h-screen bg-light-bg dark:bg-dark-bg"
     >
       <motion.div className="w-full h-16 lg:h-32 bg-light-bg2 dark:bg-dark-text1">
-        <Container>
-          <motion.div
-            ref={ref2}
-            variants={nameV}
-            animate={inView2 ? "animate" : "initial"}
-            className="relative h-8 my-6 lg:h-20"
-          >
-            {/* shalow about */}
-            <p className="absolute text-4xl italic text-white opacity-25 dark:text-dark-bg lg:text-6xl -top-6 lg:-top-2 left-12">
-              About
-            </p>
-
-            {/* main about */}
-            <p className="absolute bottom-0 left-0 text-3xl font-bold dark:text-dark-bg lg:text-5xl text-light-bg">
-              {" "}
-              About
-            </p>
-            <motion.div
-              ref={ref3}
-              variants={lineWidth}
-              animate={inView3 ? "animate" : "initial"}
-              className="absolute bottom-0 left-0 w-6/12 border-b-2 dark:border-dark-bg"
-            ></motion.div>
-          </motion.div>
-        </Container>
+        <Heading
+          ref1={ref2}
+          ref2={ref3}
+          inView1={inView2}
+          inView2={inView3}
+          variant1={nameV}
+          variant2={lineWidth}
+          text="About"
+          ligthColorMain="text-light-bg"
+          ligthColorSecondary="text-white"
+          darkColorMain="text-dark-bg"
+          darkColorSecondary="text-dark-bg"
+          borderColor="border-white"
+          darkBorder="border-dark-bg"
+        />
       </motion.div>
 
       {/* image and about description */}
@@ -249,6 +207,12 @@ const Details: React.FC = () => {
                   className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Javascript(ES6+)
+                </motion.div>
+                <motion.div
+                  variants={bounce}
+                  className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                >
+                  Typescript
                 </motion.div>
                 <motion.div
                   variants={bounce}

@@ -173,3 +173,35 @@ export const width = {
     },
   },
 };
+
+export const nameV = {
+  initial: {
+    opacity: 0,
+    translateY: "70px",
+  },
+  animate: {
+    opacity: 1,
+    translateY: "0px",
+    transition: {
+      delay: 1,
+      type: "spring",
+      stiffness: 100,
+    },
+  },
+};
+
+export const lineWidth = {
+  initial: {
+    opacity: 0,
+    width: 0,
+  },
+  animate: {
+    opacity: 1,
+    width: "50%",
+    transition: {
+      delay: 1.3,
+      type: "spring",
+      duration: 2,
+    },
+  },
+};
