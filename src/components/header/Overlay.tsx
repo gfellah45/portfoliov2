@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { listMobile, overLay } from "../Animations";
 
 interface Props {
   toggle: boolean;
   handleCollapse: () => void;
+  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Overlay: React.FC<Props> = ({ toggle, handleCollapse }) => {
+const Overlay: React.FC<Props> = ({ toggle, handleCollapse, setToggle }) => {
   const navItem = [
     {
       item: "About",

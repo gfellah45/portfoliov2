@@ -10,26 +10,32 @@ const Details: React.FC = () => {
 
   const { ref, inView } = useInView({
     threshold: 0.3,
+    triggerOnce: true,
   });
 
   const { ref: ref2, inView: inView2 } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
 
   const { ref: ref3, inView: inView3 } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
 
   const { ref: ref4, inView: inView4 } = useInView({
     threshold: 0.7,
+    triggerOnce: true,
   });
 
   const { ref: ref5, inView: inView5 } = useInView({
     threshold: 0.7,
+    triggerOnce: true,
   });
 
   const { ref: ref6, inView: inView6 } = useInView({
     threshold: 0.7,
+    triggerOnce: true,
   });
 
   const container2 = {
@@ -216,19 +222,19 @@ const Details: React.FC = () => {
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Reactjs / React Native
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nextjs
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nodejs
                 </motion.div>
@@ -240,15 +246,15 @@ const Details: React.FC = () => {
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
-                  CSS3
+                  CSS3/SCSS
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
-                  Chakra UI / TailwindCSS / Bootstrap
+                  Chakra UI/TailwindCSS
                 </motion.div>
               </motion.div>
             </div>

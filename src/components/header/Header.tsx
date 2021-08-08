@@ -38,7 +38,11 @@ const Header: React.FC = () => {
           </div>
           <div className=" lg:hidden xl:hidden">
             <MobileNav toggle={toggle} handleCollapse={handleCollapse} />
-            <Overlay toggle={toggle} handleCollapse={handleCollapse} />
+            <Overlay
+              toggle={toggle}
+              handleCollapse={handleCollapse}
+              setToggle={setToggle}
+            />
           </div>
         </div>
       </div>
