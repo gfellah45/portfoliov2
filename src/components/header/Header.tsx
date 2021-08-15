@@ -32,12 +32,15 @@ const Header: React.FC = () => {
         <div className="">
           <Switcher />
         </div>
-        <div className="w-9/12">
+        <div className="lg:w-9/12">
           <div className="hidden sm:hidden md:hidden lg:block xl:block ">
             <Navigation />
           </div>
-          <div className=" lg:hidden xl:hidden">
-            <MobileNav toggle={toggle} handleCollapse={handleCollapse} />
+          <div className="lg:hidden xl:hidden">
+            <div className="ml-auto mr-0 ">
+              <MobileNav toggle={toggle} handleCollapse={handleCollapse} />
+            </div>
+
             <Overlay
               toggle={toggle}
               handleCollapse={handleCollapse}

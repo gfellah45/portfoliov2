@@ -17,7 +17,7 @@ const MobileNav: React.FC<Props> = ({ toggle, handleCollapse }) => {
       initial={{ borderRadius: 10 }}
       animate={toggle ? "open" : "close"}
       variants={navVariant}
-      className="flex flex-col justify-between w-10 h-10 p-2 ml-auto mr-0 rounded-sm bg-light-bg2 dark:bg-dark-text1"
+      className="flex flex-col justify-between w-10 h-10 p-2 rounded-sm bg-light-bg2 dark:bg-dark-text1"
       onClick={() => {
         handleCollapse();
       }}

@@ -8,8 +8,8 @@ const Tabs: FC = () => {
   return (
     <>
       <Tab.Group>
-        <div className="flex flex-col flex-wrap lg:flex-row">
-          <Tab.List className="flex flex-row w-10/12 mx-auto md:w-6/12 md:mx-auto md:p-2 lg:w-2/12 lg:flex-col">
+        <div className="flex flex-col flex-wrap ">
+          <Tab.List className="flex flex-row items-center justify-center w-10/12 mx-auto md:w-8/12 md:mx-auto md:p-2 lg:w-8/12 lg:mx-auto ">
             {Object.keys(experinces).map((item, idx) => {
               return (
                 <Tab
@@ -28,12 +28,12 @@ const Tabs: FC = () => {
               );
             })}
           </Tab.List>
-          <Tab.Panels className="w-full lg:w-10/12">
+          <Tab.Panels className="w-full mx-auto lg:w-10/12">
             {Object.values(experinces)
               .flat()
               .map((item: any, idx: number) => {
                 return (
-                  <Tab.Panel className="mx-0 lg:mx-2" key={idx}>
+                  <Tab.Panel className="py-4 mx-0 lg:mx-2" key={idx}>
                     <Card
                       title={item.title}
                       duration={item.duration}

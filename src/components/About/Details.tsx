@@ -152,7 +152,7 @@ const Details: React.FC = () => {
               ref={ref6}
               variants={textVariant}
               animate={inView6 ? "animate" : "initial"}
-              className="w-11/12 md:w-9/12 py-4 md:text-justify lg:w-10/12 text-[12px] md:text-sm font-medium leading-7 lg:leading-8 lg:text-sm dark:text-light-bg3 lg:text-justify text-light-text1"
+              className="w-11/12 font-body md:w-9/12 py-4 md:text-justify lg:w-10/12 text-[12px] md:text-sm font-medium leading-7 lg:leading-8 lg:text-sm dark:text-light-bg3 lg:text-justify text-light-text1"
             >
               Hello! My name is Jerry and I enjoy creating things that live on
               the web. My interest in programing started back in 2015 when I

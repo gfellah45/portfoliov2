@@ -37,7 +37,7 @@ const Experience: FC = () => {
             ref={ref3}
             variants={fadeUp}
             animate={inView3 ? "animate" : "initial"}
-            className="py-6 lg:py-16"
+            className="py-6 lg:py-10"
           >
             <Tabs />
           </motion.div>

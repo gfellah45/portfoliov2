@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { listMobile, overLay } from "../Animations";
+import MobileNav from "./MobileNav";
+import { LogoLight } from "./Logo";
 
 interface Props {
   toggle: boolean;
@@ -45,10 +47,10 @@ const Overlay: React.FC<Props> = ({ toggle, handleCollapse, setToggle }) => {
       initial={{ x: "-100vw" }}
       variants={overLay}
       animate={toggle ? "open" : "close"}
-      className="fixed top-0 bottom-0 left-0 z-50 w-7/12 h-screen "
-      onClick={() => handleCollapse()}
+      className="absolute top-0 bottom-0 left-0 z-20 w-full h-screen "
     >
-      <div className="w-full h-full text-3xl rounded-r-3xl bg-light-bg2 dark:bg-dark-text1">
+      <div className="absolute w-full h-full bg-light-bg2 blur-lg contrast-100 backdrop-filter backdrop-blur-lg filter dark:bg-dark-text1 "></div>
+      <div className="absolute z-50 flex items-center justify-center w-full h-full">
         <nav className="items-center justify-around py-28 lg:py-0 lg:flex-row xl:flex-row lg:justify-between xl:justify-between h-5/6 lg:h-full xl:h-full">
           <motion.ul
             variants={container}
@@ -57,6 +59,7 @@ const Overlay: React.FC<Props> = ({ toggle, handleCollapse, setToggle }) => {
           >
             {navItem.map((item, idx) => (
               <motion.li
+                onClick={() => handleCollapse()}
                 // whileHover={{ scale: 1.2 }}
                 variants={listMobile}
                 custom={idx}
@@ -69,6 +72,10 @@ const Overlay: React.FC<Props> = ({ toggle, handleCollapse, setToggle }) => {
             ))}
           </motion.ul>
         </nav>
+        <div className="absolute bottom-0 flex items-center justify-between w-full h-16 p-2 bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg">
+          <MobileNav handleCollapse={handleCollapse} toggle={toggle} />
+          <LogoLight />
+        </div>
       </div>
     </motion.div>
   );

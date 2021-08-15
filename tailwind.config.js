@@ -19,10 +19,16 @@ module.exports = {
         },
       },
       fontFamily: {
-        body: ["Nunito", "sans-serif"],
+        body: ["Alegreya", "serif"],
+        heading: ["Playfair Display", " serif"],
+        text: ["Source Sans Pro", "sans-serif"],
       },
     },
   },
+
+  //   font-family: 'Alegreya', serif;
+  // font-family: 'Playfair Display', serif;
+  // font-family: 'Source Sans Pro', sans-serif;
 
   variants: {
     extend: {},
