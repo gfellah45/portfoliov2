@@ -15,7 +15,7 @@ interface Props {
   darkColorMain?: string;
   darkColorSecondary?: string;
   borderColor?: string;
-  darkBorder?: string;
+  darkBorder?: any;
 }
 
 const Heading: FC<Props> = ({
