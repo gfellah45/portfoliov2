@@ -72,7 +72,7 @@ const Overlay: React.FC<Props> = ({ toggle, handleCollapse, setToggle }) => {
             ))}
           </motion.ul>
         </nav>
-        <div className="absolute bottom-0 flex items-center justify-between w-full h-16 p-2 bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg">
+        <div className="absolute top-0 left-0 flex items-center justify-between w-full h-16 p-2 bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg">
           <MobileNav handleCollapse={handleCollapse} toggle={toggle} />
           <LogoLight />
         </div>

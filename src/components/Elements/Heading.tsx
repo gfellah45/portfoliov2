@@ -58,7 +58,7 @@ const Heading: FC<Props> = ({
           ref={ref2}
           variants={variant2}
           animate={inView2 ? "animate" : "initial"}
-          className={`absolute bottom-0 ${borderColor} left-0 w-6/12 border-b-2 dark:${darkBorder}`}
+          className={`absolute bottom-0 ${borderColor} left-0 w-6/12 border-b-2 dark:${borderColor}`}
         ></motion.div>
       </motion.div>
     </Container>

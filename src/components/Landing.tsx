@@ -9,7 +9,7 @@ const Landing: React.FC = () => {
   return (
     <div>
       <div
-        className="flex flex-col flex-wrap justify-between min-h-[80vh] lg:min-h-[90vh] "
+        className="flex flex-col flex-wrap justify-between min-h-[90vh] lg:min-h-[90vh] "
         // style={{ minHeight: "90vh" }}
       >
         <div className="pt-20 lg:pt-20">
