@@ -47,6 +47,7 @@ const Overlay: React.FC = () => {
       initial={{ x: "-100vw" }}
       variants={overLay}
       animate={header ? "open" : "close"}
+      onClick={() => toggleHeader()}
       className="absolute top-0 bottom-0 left-0 z-20 w-full h-screen "
     >
       <div className="absolute w-full h-full opacity-90 bg-light-bg2 backdrop-filter backdrop-blur-2xl dark:bg-dark-text1 "></div>

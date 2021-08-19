@@ -133,13 +133,11 @@ const Details: React.FC = () => {
           inView2={inView3}
           variant1={nameV}
           variant2={lineWidth}
-          text="About"
+          text="01. About"
           ligthColorMain="text-light-bg"
-          ligthColorSecondary="text-white"
           darkColorMain="text-dark-bg"
-          darkColorSecondary="text-dark-bg"
-          borderColor="border-white"
-          darkBorder="border-dark-bg"
+          bgLight="bg-white"
+          bgDark="bg-dark-bg"
         />
       </motion.div>
 

@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         body: ["Alegreya", "serif"],
         heading: ["Playfair Display", " serif"],
+        heading2: ["Anton", "sans-serif"],
         text: ["Source Sans Pro", "sans-serif"],
       },
     },

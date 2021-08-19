@@ -23,13 +23,11 @@ const Experience: FC = () => {
         inView2={inView2}
         variant1={nameV}
         variant2={lineWidth}
-        text="Experience"
+        text="02. Experience"
         ligthColorMain="text-light-bg2"
-        ligthColorSecondary="text-light-bg2"
         darkColorMain="text-light-bg3"
-        darkColorSecondary="text-light-bg3"
-        borderColor="border-light-bg2"
-        darkBorder="border-light-bg3"
+        bgLight="bg-light-bg2"
+        bgDark="bg-dark-text1"
       />
       <div className="my-12 dark:bg-dark-text1 bg-light-bg2">
         <Container>
