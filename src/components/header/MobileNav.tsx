@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   navVariant,
   barVariant1,
@@ -6,34 +6,32 @@ import {
   barVariant3,
 } from "../Animations";
 import { motion } from "framer-motion";
+import { HeaderContext } from "../../Context/Header";
 
-interface Props {
-  toggle: boolean;
-  handleCollapse: () => void;
-}
-const MobileNav: React.FC<Props> = ({ toggle, handleCollapse }) => {
+const MobileNav: React.FC = () => {
+  const { header, toggleHeader } = useContext(HeaderContext);
   return (
     <motion.div
       initial={{ borderRadius: 10 }}
-      animate={toggle ? "open" : "close"}
+      animate={header ? "open" : "close"}
       variants={navVariant}
       className="flex flex-col justify-between w-10 h-10 p-2 rounded-sm bg-light-bg2 dark:bg-dark-text1"
       onClick={() => {
-        handleCollapse();
+        toggleHeader();
       }}
     >
       <motion.div
-        animate={toggle ? "open" : "close"}
+        animate={header ? "open" : "close"}
         variants={barVariant2}
         className="w-full h-1 origin-center bg-light-bg1 dark:bg-light-text2 "
       ></motion.div>
       <motion.div
-        animate={toggle ? "open" : "close"}
+        animate={header ? "open" : "close"}
         variants={barVariant1}
         className="w-full h-1 origin-center transform bg-light-bg1 dark:bg-light-text2 "
       ></motion.div>
       <motion.div
-        animate={toggle ? "open" : "close"}
+        animate={header ? "open" : "close"}
         variants={barVariant3}
         className="w-full h-1 origin-center transform bg-light-bg1 dark:bg-light-text2 "
       ></motion.div>

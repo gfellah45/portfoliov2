@@ -8,10 +8,10 @@ import Switcher from "./Switcher";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 
 const Header: React.FC = () => {
-  const [toggle, setToggle] = useState(false);
-  const handleCollapse = () => {
-    setToggle((prevState) => !prevState);
-  };
+  // const [toggle, setToggle] = useState(false);
+  // const handleCollapse = () => {
+  //   setToggle((prevState) => !prevState);
+  // };
 
   const [isLightTheme] = useLocalStorage("lightTheme", true);
 
@@ -38,14 +38,10 @@ const Header: React.FC = () => {
           </div>
           <div className="lg:hidden xl:hidden">
             <div className="ml-auto mr-0 ">
-              <MobileNav toggle={toggle} handleCollapse={handleCollapse} />
+              <MobileNav />
             </div>
 
-            <Overlay
-              toggle={toggle}
-              handleCollapse={handleCollapse}
-              setToggle={setToggle}
-            />
+            <Overlay />
           </div>
         </div>
       </div>
