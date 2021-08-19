@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
       variants={width}
       initial="hidden"
       animate="show"
-      className="relative flex items-center justify-center h-full bg-light-bg2 dark:bg-dark-text1"
+      className="relative flex justify-center h-full bg-light-bg2 dark:bg-dark-text1"
     >
       <motion.div
         initial={{ opacity: 0 }}

@@ -41,7 +41,7 @@ const Heading: FC<Props> = ({
 
         {/* main about */}
         <p
-          className={`text-2xl  font-bold dark:${darkColorMain} lg:text-5xl ${ligthColorMain} `}
+          className={`text-3xl pb-4 font-bold dark:${darkColorMain} lg:text-5xl ${ligthColorMain} `}
         >
           {text}
         </p>
