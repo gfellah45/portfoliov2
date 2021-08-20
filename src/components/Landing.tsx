@@ -5,6 +5,7 @@ import Contact from "./Hero/Contact";
 import Title from "./Hero/Title";
 import Experience from "./Experience/Experience";
 import { HeaderContext } from "../Context/Header";
+import FeaturedProjects from "./Projects/FeaturedProjects";
 
 const Landing: React.FC = () => {
   const [top, setTop] = useState(false);
@@ -29,7 +30,7 @@ const Landing: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", rezize);
     };
-  }, []);
+  }, [setHeader]);
 
   return (
     <div>
@@ -52,11 +53,10 @@ const Landing: React.FC = () => {
       <Experience />
       {top && (
         <a href="#">
-          <div className="fixed flex flex-col items-center justify-center w-12 h-12 p-4 text-white transition-all duration-300 ease-in-out rounded-full cursor-pointer animate-bounce bottom-4 right-4 bg-light-text2 dark:bg-light-bg2">
+          <div className="fixed flex flex-col items-center justify-center w-12 h-12 p-4 text-white transition-all duration-300 ease-in-out rounded-full shadow-2xl cursor-pointer animate-bounce bottom-4 right-4 bg-light-text2 dark:bg-light-bg2">
             <p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 24 24"
                 height="24px"
                 viewBox="0 0 24 24"
                 width="24px"
@@ -70,6 +70,8 @@ const Landing: React.FC = () => {
           </div>
         </a>
       )}
+
+      <FeaturedProjects />
     </div>
   );
 };
