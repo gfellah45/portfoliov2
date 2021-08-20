@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Container from "../Container";
 import Details from "./About/Details";
 import Contact from "./Hero/Contact";
 import Title from "./Hero/Title";
 import Experience from "./Experience/Experience";
+import { HeaderContext } from "../Context/Header";
 
 const Landing: React.FC = () => {
+  const [top, setTop] = useState(false);
+
+  const { setHeader } = useContext(HeaderContext);
+  useEffect(() => {
+    const rezize = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50) {
+        setHeader(false);
+      }
+
+      if (scrollY > 200) {
+        setTop(true);
+      } else {
+        setTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", rezize);
+    return () => {
+      window.removeEventListener("scroll", rezize);
+    };
+  }, []);
+
   return (
     <div>
       <div
@@ -25,6 +50,26 @@ const Landing: React.FC = () => {
 
       <Details />
       <Experience />
+      {top && (
+        <a href="#">
+          <div className="fixed flex flex-col items-center justify-center w-12 h-12 p-4 text-white transition-all duration-300 ease-in-out rounded-full cursor-pointer animate-bounce bottom-4 right-4 bg-light-text2 dark:bg-light-bg2">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 24 24"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#FFFFFF"
+              >
+                <rect fill="none" height="24" width="24" />
+                <path d="M5,9l1.41,1.41L11,5.83V22H13V5.83l4.59,4.59L19,9l-7-7L5,9z" />
+              </svg>
+            </p>
+            <p className="text-xs font-light">Top</p>
+          </div>
+        </a>
+      )}
     </div>
   );
 };
