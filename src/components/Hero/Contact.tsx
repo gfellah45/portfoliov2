@@ -22,14 +22,14 @@ const Contact: React.FC = () => {
         transition={{ delay: 2.3, type: "spring" }}
         className="absolute hidden transition-all duration-300 ease-in-out lg:block top-10 lg:left-28 xl:left-96 animate-pulse motion-safe:animate-bounce"
       >
-        <Email currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+        <Email currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
       </motion.div>
       <div className="">
         <motion.p
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 2.1, type: "spring", duration: 2 }}
-          className="my-4 text-lg font-semibold text-dark-text1 dark:text-light-bg2"
+          className="my-4 text-lg font-semibold text-dark-text1 dark:text-dark-bg"
         >
           jerry.aaron45@gmail.com
         </motion.p>
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer text-light-bg1"
             >
-              <Twitter currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+              <Twitter currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
 
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Github currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+              <Github currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
 
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Linkden currentColor={isLightTheme ? "#ffffff" : "#7510F7"} />
+              <Linkden currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
         </motion.div>

@@ -125,7 +125,7 @@ const Details: React.FC = () => {
       id="about"
       className="flex flex-col flex-wrap justify-between w-full min-h-screen bg-light-bg dark:bg-dark-bg"
     >
-      <motion.div className="w-full h-16 lg:h-32 bg-light-bg2 dark:bg-dark-text1">
+      <motion.div className="w-full h-24 lg:h-32 bg-light-bg2 dark:bg-dark-text1">
         <Heading
           ref1={ref2}
           ref2={ref3}

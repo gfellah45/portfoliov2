@@ -9,7 +9,7 @@ const Landing: React.FC = () => {
   return (
     <div>
       <div
-        className="relative min-h-[90vh] lg:min-h-[90vh] "
+        className="relative min-h-[89vh]  lg:min-h-[90vh] "
         // style={{ minHeight: "90vh" }}
       >
         <div className="pt-20 lg:pt-20">

@@ -35,7 +35,7 @@ const Heading: FC<Props> = ({
         ref={ref1}
         variants={variant1}
         animate={inView1 ? "animate" : "initial"}
-        className="flex items-center py-2 my-6 "
+        className="flex items-center h-full py-4 "
       >
         {/* shalow about */}
 
