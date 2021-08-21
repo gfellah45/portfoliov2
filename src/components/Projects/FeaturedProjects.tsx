@@ -26,10 +26,13 @@ const FeaturedProjects = (props: Props) => {
         bgLight="bg-light-bg2"
         bgDark="bg-dark-text1"
       />
-      <div className="w-11/12 md:w-7/12 mx-auto h-[60vh]">
-        <div className="flex flex-col-reverse flex-wrap w-full border rounded-lg shadow-2xl md:flex-row h-4/5">
-          <div className="relative w-full h-full p-4 overflow-hidden rounded-lg lg:w-6/12 bg-light-bg2">
-            <p className="absolute w-6 h-6 text-white cursor-pointer right-16">
+      <div className="w-11/12 md:w-11/12 mx-auto  lg:h-[60vh]">
+        <div className="flex flex-wrap w-full border rounded-lg shadow-2xl md:flex-row h-4/5">
+          <div className="relative w-full h-full p-4 overflow-hidden rounded-lg md:w-6/12 lg:w-6/12 bg-light-bg2">
+            <p className="absolute text-xs text-white left-4 md:text-lg">
+              Featured Project
+            </p>
+            <p className="absolute w-5 h-5 text-white cursor-pointer md:w-6 md:h-6 right-16">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -46,7 +49,7 @@ const FeaturedProjects = (props: Props) => {
                 ></path>
               </svg>
             </p>
-            <p className="absolute w-6 h-6 text-white cursor-pointer right-4">
+            <p className="absolute w-5 h-5 text-white cursor-pointer md:w-6 md:h-6 right-4">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -63,14 +66,16 @@ const FeaturedProjects = (props: Props) => {
                 ></path>
               </svg>
             </p>
-            <h3 className="pt-4 text-3xl text-white ">Personal Portfolio</h3>
-            <p className="px-2 py-4 mt-4 text-white bg-white rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-2xl">
+            <h3 className="pt-4 text-2xl text-white md:mt-2 md:text-3xl ">
+              Personal Portfolio
+            </h3>
+            <p className="px-2 py-4 mt-4 text-sm text-white rounded-lg md:py-2 md:mt-1 b md:text-lg ">
               This is my personal website built to market my skills also have a
               blog integrated where i can share my knowledege and open down my
               journey.{" "}
             </p>
 
-            <div className="grid w-full grid-cols-5 gap-2 pt-8 ">
+            <div className="grid w-full grid-cols-4 gap-2 lg:pt-8 md:pt-6 md:grid-cols-5 ">
               {[
                 "Nextjs",
                 "Typescript",
@@ -81,14 +86,14 @@ const FeaturedProjects = (props: Props) => {
               ].map((item, id) => (
                 <p
                   key={id}
-                  className="px-1 py-1 text-xs text-center bg-white cursor-pointer rounded-2xl text-light-bg2"
+                  className="px-1 py-1 text-[.6em] md:text-xs text-center bg-white cursor-pointer rounded-2xl text-light-bg2"
                 >
                   {item}
                 </p>
               ))}
             </div>
           </div>
-          <div className="w-full md:w-6/12">
+          <div className="hidden w-full md:w-6/12 md:block">
             <Image src={BG} />
           </div>
         </div>
