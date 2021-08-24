@@ -13,26 +13,29 @@ const FeaturedProjects = (props: Props) => {
 
   return (
     <div id="works" className="min-h-screen">
-      <Heading
-        ref1={ref}
-        ref2={ref2}
-        inView1={inView}
-        inView2={inView2}
-        variant1={nameV}
-        variant2={lineWidth}
-        text="03. Projects"
-        ligthColorMain="text-light-bg2"
-        darkColorMain="text-light-bg3"
-        bgLight="bg-light-bg2"
-        bgDark="bg-dark-text1"
-      />
-      <div className="w-11/12 md:w-11/12 mx-auto  lg:h-[60vh]">
-        <div className="flex flex-wrap w-full border rounded-lg shadow-2xl md:flex-row h-4/5">
-          <div className="relative w-full h-full p-4 overflow-hidden rounded-lg md:w-6/12 lg:w-6/12 bg-light-bg2">
-            <p className="absolute text-xs text-white left-4 md:text-lg">
+      <div>
+        <Heading
+          ref1={ref}
+          ref2={ref2}
+          inView1={inView}
+          inView2={inView2}
+          variant1={nameV}
+          variant2={lineWidth}
+          text="03. Projects"
+          ligthColorMain="text-light-bg2"
+          darkColorMain="text-light-bg3"
+          bgLight="bg-light-bg2"
+          bgDark="bg-dark-text1"
+        />
+      </div>
+
+      <div className="w-11/12 h-80 md:w-11/12 lg:w-7/12 mx-auto lg:h-[60vh]">
+        <div className="flex flex-wrap w-full border shadow-2xl md:flex-row h-4/5">
+          <div className="relative w-full h-full p-4 md:w-6/12 lg:w-6/12 dark:bg-dark-text1 bg-light-bg2">
+            <p className="absolute text-xs text-white dark:text-dark-bg left-4 md:text-lg">
               Featured Project
             </p>
-            <p className="absolute w-5 h-5 text-white cursor-pointer md:w-6 md:h-6 right-16">
+            <p className="absolute w-5 h-5 text-white cursor-pointer dark:text-dark-bg md:w-6 md:h-6 right-16">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -49,7 +52,7 @@ const FeaturedProjects = (props: Props) => {
                 ></path>
               </svg>
             </p>
-            <p className="absolute w-5 h-5 text-white cursor-pointer md:w-6 md:h-6 right-4">
+            <p className="absolute w-5 h-5 text-white cursor-pointer dark:text-dark-bg md:w-6 md:h-6 right-4">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -66,31 +69,34 @@ const FeaturedProjects = (props: Props) => {
                 ></path>
               </svg>
             </p>
-            <h3 className="pt-4 text-2xl text-white md:mt-2 md:text-3xl ">
-              Personal Portfolio
-            </h3>
-            <p className="px-2 py-4 mt-4 text-sm text-white rounded-lg md:py-2 md:mt-1 b md:text-lg ">
-              This is my personal website built to market my skills also have a
-              blog integrated where i can share my knowledege and open down my
-              journey.{" "}
-            </p>
 
-            <div className="grid w-full grid-cols-4 gap-2 lg:pt-8 md:pt-6 md:grid-cols-5 ">
-              {[
-                "Nextjs",
-                "Typescript",
-                "React",
-                "Tailwindcss",
-                "Strapi",
-                "HeadlessUI",
-              ].map((item, id) => (
-                <p
-                  key={id}
-                  className="px-1 py-1 text-[.6em] md:text-xs text-center bg-white cursor-pointer rounded-2xl text-light-bg2"
-                >
-                  {item}
-                </p>
-              ))}
+            <div className="flex flex-col justify-between mt-8 h-5/6">
+              <h3 className="text-2xl text-white dark:text-dark-bg md:mt-2 md:text-3xl">
+                Personal Portfolio
+              </h3>
+              <p className="text-sm text-white dark:text-dark-bg rounded-lg md:py-2 md:mt-1 b md:text-[14px] ">
+                This is my personal website built to market my skills also have
+                a blog integrated where i can share my knowledege and open down
+                my journey.{" "}
+              </p>
+
+              <div className="grid w-full grid-cols-4 gap-2 md:grid-cols-5 ">
+                {[
+                  "Nextjs",
+                  "Typescript",
+                  "React",
+                  "Tailwindcss",
+                  "Strapi",
+                  "HeadlessUI",
+                ].map((item, id) => (
+                  <p
+                    key={id}
+                    className="px-1 py-1 text-[.6em] md:text-xs text-center dark:text-white bg-white dark:bg-dark-bg cursor-pointer rounded-2xl text-light-bg2"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
           <div className="hidden w-full md:w-6/12 md:block">

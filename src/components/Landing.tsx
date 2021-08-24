@@ -53,7 +53,7 @@ const Landing: React.FC = () => {
       <Experience />
       {top && (
         <a href="#">
-          <div className="fixed flex flex-col items-center justify-center w-12 h-12 p-4 text-white transition-all duration-300 ease-in-out rounded-full shadow-2xl cursor-pointer animate-bounce bottom-4 right-4 bg-light-text2 dark:bg-light-bg2">
+          <div className="fixed z-50 flex flex-col items-center justify-center w-12 h-12 p-4 text-white transition-all duration-300 ease-in-out rounded-full shadow-2xl cursor-pointer animate-bounce bottom-4 right-4 bg-light-text2 dark:bg-light-bg2">
             <p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
