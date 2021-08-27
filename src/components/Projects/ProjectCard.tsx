@@ -52,7 +52,7 @@ const ProjectCard: FC<Props> = ({
           )}
 
           {github && (
-            <a href={github} target="_blank" rel="openner nooppener">
+            <a href={github} target="_blank" rel="noopener noreferrer">
               <p className="absolute w-5 h-5 text-white cursor-pointer dark:text-dark-bg md:w-6 md:h-6 right-4">
                 <svg
                   aria-hidden="true"
