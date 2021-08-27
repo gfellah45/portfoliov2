@@ -14,7 +14,7 @@ const Experience: FC = () => {
   return (
     <div
       id="experience"
-      className="w-full h-16 min-h-screen py-2 li dark:bg-dark-bg lg:h-32 "
+      className="w-full h-16 min-h-[70vh] py-2 lg:min-h-screen dark:bg-dark-bg lg:h-32 "
     >
       <Heading
         ref1={ref}
