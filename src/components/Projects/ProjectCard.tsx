@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
+import { fadeUp } from "../Animations";
+import { useInView } from "react-intersection-observer";
 interface Props {
   title: string;
   discription: string;
@@ -20,9 +22,21 @@ const ProjectCard: FC<Props> = ({
   technologies,
   featured,
 }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
   return (
-    <div className="w-11/12 h-80 md:w-11/12 lg:w-9/12 xl:w-8/12 mx-auto lg:h-[50vh] xl:h-[60vh]">
-      <div className="flex flex-wrap w-full shadow-2xl md:flex-row h-4/5">
+    <motion.div
+      ref={ref}
+      variants={fadeUp}
+      animate={inView ? "animate" : "initial"}
+      className="w-11/12 cursor-pointer h-80 md:w-11/12 lg:w-9/12 xl:w-8/12 mx-auto lg:h-[50vh] xl:h-[60vh]"
+    >
+      <motion.div
+        whileHover={{ boxShadow: "-3px -12px 36px 2px rgba(177,16,247,0.58)" }}
+        className="flex flex-wrap w-full md:flex-row h-4/5"
+        style={{ boxShadow: "-3px -6px 16px 2px rgba(177,16,247,0.28)" }}
+      >
         <div className="relative w-full h-full p-4 rounded-lg shadow-inner md:rounded-none md:w-6/12 lg:w-6/12 dark:bg-dark-text1 bg-light-bg2">
           {featured && (
             <p className="absolute text-xs text-white dark:text-dark-bg left-4 md:text-lg">
@@ -101,8 +115,8 @@ const ProjectCard: FC<Props> = ({
         >
           <Image src={image} layout="fill" objectFit="fill" />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

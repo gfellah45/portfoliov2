@@ -34,8 +34,18 @@ const FeaturedProjects = (props: Props) => {
         "Jiffx is an auto mobile repair and services startup. I was contracted to build the front end of their new web app which automate repairs and services for the user. also store user repiar history for better automivle advices on services ",
       image: "/jiffix.png",
       link: "https://jiffix-v1.vercel.app/",
-      github: "https://github.com/gfellah45/portfoliov2",
+      github: "",
       technologies: ["React", "NextJs", "Javascript", "Redux", "ChakraUi"],
+      featured: true,
+    },
+    {
+      title: "Livrite Healthcare App",
+      discription:
+        "Livrite healthcare is a health startup which aims to provide top notch healthcare service via technology with its Bimrec app. i was part of the team that built the ui and at some point lead the front end team  ",
+      image: "/livrite.png",
+      link: "https://livritehealthcare.com.ng/",
+      github: "",
+      technologies: ["React", "Javascript", "Redux", "MaterialUI"],
       featured: true,
     },
   ]);

@@ -6,6 +6,7 @@ import Title from "./Hero/Title";
 import Experience from "./Experience/Experience";
 import { HeaderContext } from "../Context/Header";
 import FeaturedProjects from "./Projects/FeaturedProjects";
+import Preview from "./Blog/Preview";
 
 const Landing: React.FC = () => {
   const [top, setTop] = useState(false);
@@ -72,6 +73,7 @@ const Landing: React.FC = () => {
       )}
 
       <FeaturedProjects />
+      <Preview />
     </div>
   );
 };

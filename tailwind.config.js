@@ -17,6 +17,9 @@ module.exports = {
           bg: "#0a192f",
           text1: "#dbe6f4",
         },
+        boxShadow: {
+          default: "-3px -12px 16px 2px rgba(177,16,247,0.58)",
+        },
       },
       fontFamily: {
         body: ["Alegreya", "serif"],

@@ -110,7 +110,12 @@ export const listMobile = {
 export const fadeUp = {
   initial: {
     opacity: 0,
-    translateY: "30px",
+    translateY: "60px",
+    transition: {
+      type: "spring",
+      duration: 1,
+      delay: 0.3,
+    },
   },
   animate: {
     opacity: 1,
@@ -118,7 +123,7 @@ export const fadeUp = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 0.5,
+      delay: 0.3,
     },
   },
 };
