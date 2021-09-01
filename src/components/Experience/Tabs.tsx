@@ -28,7 +28,7 @@ const Tabs: FC = () => {
               );
             })}
           </Tab.List>
-          <Tab.Panels className="w-full mx-auto lg:w-10/12">
+          <Tab.Panels className="w-full mx-auto lg:w-8/12">
             {Object.values(experinces)
               .flat()
               .map((item: any, idx: number) => {

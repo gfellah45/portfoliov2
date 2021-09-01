@@ -1,7 +1,11 @@
 import React, { FC } from "react";
-import Heading from "../Elements/Heading";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+
 import { nameV, lineWidth } from "../Animations";
+import Container from "../../Container";
+import Heading from "../Elements/Heading";
+import ArticleCard from "./ArticleCard";
 
 interface Props {}
 
@@ -28,6 +32,18 @@ const Preview: FC = () => {
         bgLight="bg-light-bg2"
         bgDark="bg-dark-text1"
       />
+
+      <Container>
+        <div className="my-2 mb-8">
+          <div className="text-2xl text-light-bg2 dark:text-light-bg">
+            Latest Articles
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <ArticleCard />
+          <ArticleCard />
+        </div>
+      </Container>
     </div>
   );
 };
