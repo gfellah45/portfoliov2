@@ -8,8 +8,12 @@ import ProjectCard from "./ProjectCard";
 interface Props {}
 
 const FeaturedProjects = (props: Props) => {
-  const { ref, inView } = useInView();
-  const { ref: ref2, inView: inView2 } = useInView();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: ref2, inView: inView2 } = useInView({
+    triggerOnce: true,
+  });
   const [project] = useState([
     {
       title: "Personal Portfolio",

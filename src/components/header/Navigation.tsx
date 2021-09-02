@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { listDesktop } from "../Animations";
 
@@ -18,7 +19,7 @@ const Navigation: React.FC = () => {
     },
     {
       item: "Blog",
-      tag: "#blog",
+      tag: "/blog",
     },
   ];
 
@@ -35,7 +36,11 @@ const Navigation: React.FC = () => {
             key={idx}
             className={`text-text-heading2 hover:text-light-bg2 dark:text-dark-text1 text-lg font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
           >
-            <a href={item.tag}>{item.item}</a>
+            {item.tag === "/blog" ? (
+              <Link href={item.tag}>{item.item}</Link>
+            ) : (
+              <a href={item.tag}>{item.item}</a>
+            )}
           </motion.li>
         ))}
       </motion.ul>

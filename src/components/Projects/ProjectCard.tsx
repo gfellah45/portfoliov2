@@ -24,6 +24,7 @@ const ProjectCard: FC<Props> = ({
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
   return (
     <motion.div

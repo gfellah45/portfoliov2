@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import { LogoLight, LogoDark } from "./Logo";
 import Navigation from "./Navigation";
 import MobileNav from "./MobileNav";
@@ -18,14 +19,16 @@ const Header: React.FC = () => {
   return (
     <header className="flex flex-wrap justify-between py-4">
       {/* logo */}
-      <motion.div
-        initial={{ translateX: "-100px" }}
-        animate={{ translateX: "0px" }}
-        transition={{ type: "spring", duration: 1 }}
-        className="rounded-md "
-      >
-        {isLightTheme ? <LogoLight /> : <LogoDark />}
-      </motion.div>
+      <Link href="/">
+        <motion.div
+          initial={{ translateX: "-100px" }}
+          animate={{ translateX: "0px" }}
+          transition={{ type: "spring", duration: 1 }}
+          className="rounded-md cursor-pointer "
+        >
+          {isLightTheme ? <LogoLight /> : <LogoDark />}
+        </motion.div>
+      </Link>
 
       {/* navigation */}
       <div className="flex flex-wrap items-center justify-between w-5/12 lg:w-7/12">
