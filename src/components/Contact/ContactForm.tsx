@@ -7,6 +7,7 @@ interface Props {}
 
 const ContactForm = (props: Props) => {
   const { ref, inView } = useInView({
+    triggerOnce: true,
     threshold: 0.5,
   });
 
