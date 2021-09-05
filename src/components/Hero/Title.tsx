@@ -32,18 +32,9 @@ const Hero: React.FC = () => {
         className="w-full my-4 space-x-3 text-lg font-medium tracking-wider text-gray-500 font-text md:w-11/12 lg:text-lg lg:w-8/12 xl:w-7/12 dark:text-gray-400"
       >
         I&#39;m a Nigerian base software developer who enjoys building
-        exceptional digital experiences. Currently, I&#39;m a front-end engineer
-        at{" "}
-        <span className="inline-block font-bold text-light-bg2">
-          <a
-            href="http://everyfarmer.farm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            EveryFarmer
-          </a>
-        </span>{" "}
-        focused on building accessible, human-centered products.
+        exceptional digital experiences. Currently, I&#39;m focused on the
+        front-end of the web and mobile, building accessible, human-centered
+        products.
       </motion.p>
     </motion.div>
   );

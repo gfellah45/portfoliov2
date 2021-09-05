@@ -114,7 +114,7 @@ const ProjectCard: FC<Props> = ({
           //   backgroundImage: `url(${"/ji.png"})`,
           // }}
         >
-          <Image src={image} layout="fill" objectFit="fill" />
+          <Image src={image} layout="fill" objectFit="fill" priority={true} />
         </div>
       </motion.div>
     </motion.div>

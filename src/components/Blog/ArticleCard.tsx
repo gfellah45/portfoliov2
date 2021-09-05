@@ -28,7 +28,7 @@ const ArticleCard = (props: Props) => {
             />
           </div>
           <div className="px-4 w-60 h-60">
-            <div className="justify-center py-2 overflow-hidden text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-2/4 dark:text-light-bg">
+            <div className="justify-center py-2 overflow-hidden text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-3/4 dark:text-light-bg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
               quisquam, laudantium excepturi suscipit amet omnis optio doloribus
               veritatis dolore officiis itaque accusamus delectus nisi quidem

@@ -16,6 +16,7 @@ const ContactForm = (props: Props) => {
     email: "",
     message: "",
   });
+  const [btnText, setBtnText] = useState("Send");
 
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
@@ -73,7 +74,7 @@ const ContactForm = (props: Props) => {
 
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log(userData);
+    setBtnText("Sending...");
 
     if (validateForm()) {
       fetch("/api/mail", {
@@ -92,6 +93,7 @@ const ContactForm = (props: Props) => {
           if (resp.status === 200) {
             setMessage("Message sent successfully");
             setError(false);
+            setBtnText("Message Sent");
             setUserData({
               name: "",
               email: "",
@@ -99,6 +101,7 @@ const ContactForm = (props: Props) => {
             });
             setTimeout(() => {
               setMessage("");
+              setBtnText("Send");
             }, 4000);
           }
         })
@@ -176,7 +179,7 @@ const ContactForm = (props: Props) => {
               onClick={submit}
               className="w-full px-8 py-3 my-4 text-white bg-gray-800 rounded-lg shadow-lg dark:bg-light-bg dark:text-dark-bg"
             >
-              Send
+              {btnText}
             </button>
           </form>
         </div>

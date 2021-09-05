@@ -49,7 +49,7 @@ const Preview: FC = () => {
           variants={container}
           animate="show"
           initial="hidden"
-          className="flex flex-col overflow-y-auto md:justify-between md:flex-row"
+          className="flex flex-col overflow-y-auto md:justify-between md:flex-row md:w-11/12"
         >
           <ArticleCard />
           <ArticleCard />
