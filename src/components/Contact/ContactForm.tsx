@@ -74,9 +74,9 @@ const ContactForm = (props: Props) => {
 
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    setBtnText("Sending...");
 
     if (validateForm()) {
+      setBtnText("Sending...");
       fetch("/api/mail", {
         method: "POST",
         headers: {

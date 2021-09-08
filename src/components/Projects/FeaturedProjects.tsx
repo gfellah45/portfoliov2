@@ -32,16 +32,16 @@ const FeaturedProjects = (props: Props) => {
       ],
       featured: false,
     },
-    {
-      title: "Jiffix Web App",
-      discription:
-        "Jiffx is an auto mobile repair and services startup. I was contracted to build the front end of their new web app which automate repairs and services for the user. also store user repiar history for better automivle advices on services ",
-      image: "/jiffix.png",
-      link: "https://jiffix-v1.vercel.app/",
-      github: "",
-      technologies: ["React", "NextJs", "Javascript", "Redux", "ChakraUi"],
-      featured: true,
-    },
+    // {
+    //   title: "Jiffix Web App",
+    //   discription:
+    //     "Jiffx is an auto mobile repair and services startup. I was contracted to build the front end of their new web app which automate repairs and services for the user. also store user repiar history for better automivle advices on services ",
+    //   image: "/jiffix.png",
+    //   link: "https://jiffix-v1.vercel.app/",
+    //   github: "",
+    //   technologies: ["React", "NextJs", "Javascript", "Redux", "ChakraUi"],
+    //   featured: true,
+    // },
     {
       title: "Livrite Healthcare App",
       discription:
@@ -50,6 +50,16 @@ const FeaturedProjects = (props: Props) => {
       link: "https://livritehealthcare.com.ng/",
       github: "",
       technologies: ["React", "Javascript", "Redux", "MaterialUI"],
+      featured: true,
+    },
+    {
+      title: "EveryFarmer web dashboard",
+      discription:
+        "EveryFarmer Ecosystem Limited is an agriculture-enabling company on a mission to solve the Africa's agricultural challenges using technology. ",
+      image: "/everyfarmer.png",
+      link: "http://everyfarmer.farm",
+      github: "",
+      technologies: ["React", "NextJs", "Javascript", "Redux", "ChakraUi"],
       featured: true,
     },
   ]);
