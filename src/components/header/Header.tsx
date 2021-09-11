@@ -26,12 +26,12 @@ const Header: React.FC = () => {
           transition={{ type: "spring", duration: 1 }}
           className="rounded-md cursor-pointer "
         >
-          {isLightTheme ? <LogoLight /> : <LogoDark />}
+          {!isLightTheme ? <LogoLight /> : <LogoDark />}
         </motion.div>
       </Link>
 
       {/* navigation */}
-      <div className="flex flex-wrap items-center justify-between w-5/12 lg:w-7/12">
+      <div className="flex flex-wrap items-center justify-between w-6/12 lg:w-7/12">
         <div className="">
           <Switcher />
         </div>

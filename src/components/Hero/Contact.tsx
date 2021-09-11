@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
         transition={{ delay: 2.3, type: "spring" }}
         className="absolute hidden transition-all duration-300 ease-in-out lg:block top-10 lg:left-28 xl:left-96 animate-pulse motion-safe:animate-bounce"
       >
-        <Email currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
+        <Email currentColor={!isLightTheme ? "#ffffff" : "#0a192f"} />
       </motion.div>
       <div className="">
         <motion.p
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer text-light-bg1"
             >
-              <Twitter currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
+              <Twitter currentColor={!isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
 
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Github currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
+              <Github currentColor={!isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
 
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Linkden currentColor={isLightTheme ? "#ffffff" : "#0a192f"} />
+              <Linkden currentColor={!isLightTheme ? "#ffffff" : "#0a192f"} />
             </a>
           </motion.div>
         </motion.div>

@@ -74,7 +74,7 @@ const Overlay: React.FC = () => {
           </motion.ul>
         </nav>
         <div className="absolute top-0 left-0 flex items-center justify-between w-full h-16 p-2 bg-white dark:bg-dark-bg bg-opacity-30 backdrop-filter backdrop-blur-lg">
-          {isLightTheme ? <LogoLight /> : <LogoDark />}
+          {!isLightTheme ? <LogoLight /> : <LogoDark />}
 
           <MobileNav />
         </div>

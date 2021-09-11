@@ -208,49 +208,49 @@ const Details: React.FC = () => {
               >
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Javascript(ES6+)
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Typescript
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm lg:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Reactjs / React Native
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nextjs
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Nodejs
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[10px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   HTML5
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   CSS3/SCSS
                 </motion.div>
                 <motion.div
                   variants={bounce}
-                  className="text-[11px] md:text-sm text-light-bg dark:text-dark-bg"
+                  className="text-[13px] md:text-sm text-light-bg dark:text-dark-bg"
                 >
                   Chakra UI/TailwindCSS
                 </motion.div>

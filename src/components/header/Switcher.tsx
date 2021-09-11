@@ -15,7 +15,7 @@ const Switcher: React.FC = () => {
       className="w-6 h-8 cursor-pointer sm:w-8 md:w-8 "
       onClick={() => toggle()}
     >
-      {isLightTheme ? (
+      {!isLightTheme ? (
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
