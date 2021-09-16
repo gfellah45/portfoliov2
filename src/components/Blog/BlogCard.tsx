@@ -30,7 +30,10 @@ const BlogCard = ({ data }: Props) => {
         <div className="relative flex flex-col my-4 lg:flex-row ">
           <div className="relative w-full md:w-72 h-60">
             <Image
-              src={process.env.NEXT_PUBLIC_API_URL + splash_image[0].url}
+              src={
+                "https://blooming-gorge-90056.herokuapp.com" +
+                splash_image[0].url
+              }
               layout="fill"
               objectFit="cover"
               alt={title}
