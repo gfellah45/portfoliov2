@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { listMobile, overLay } from "../Animations";
@@ -6,13 +6,23 @@ import MobileNav from "./MobileNav";
 import { LogoLight, LogoDark } from "./Logo";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import { HeaderContext } from "../../Context/Header";
+import { useRouter } from "next/router";
+
+type Nav = {
+  item: string;
+  tag: string;
+}[];
 
 const Overlay: React.FC = () => {
   const [isLightTheme] = useLocalStorage("lightTheme", true);
 
   const { header, toggleHeader } = useContext(HeaderContext);
 
-  const navItem = [
+  const router = useRouter();
+
+  const pathName = router.pathname === "/blog" ? router.pathname : "";
+
+  const [nav, setNav] = useState<Nav>([
     {
       item: "About",
       tag: "#about",
@@ -29,7 +39,13 @@ const Overlay: React.FC = () => {
       item: "Blog",
       tag: "/blog",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    if (pathName) {
+      setNav([{ item: "Home", tag: "/" }, ...nav]);
+    }
+  }, [pathName]);
 
   const container = {
     initial: { opacity: 0 },
@@ -59,7 +75,7 @@ const Overlay: React.FC = () => {
             animate={header ? "animate" : "initial"}
             className="flex flex-col items-center justify-between w-full lg:mt-0 xl:mt-0 h-4/6 lg:h-full xl:h-full lg:flex-row xl:flex-row"
           >
-            {navItem.map((item, idx) => (
+            {nav.map((item, idx) => (
               <motion.li
                 onClick={() => toggleHeader()}
                 // whileHover={{ scale: 1.2 }}

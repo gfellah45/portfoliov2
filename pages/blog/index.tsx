@@ -12,7 +12,7 @@ interface Props {
   data: IBlog[];
 }
 
-const index = ({ data }: Props) => {
+const Blog = ({ data }: Props) => {
   const { dispatch } = useContext(BlogContext);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const index = ({ data }: Props) => {
   );
 };
 
-export default index;
+export default Blog;
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await client.query({
