@@ -1,18 +1,22 @@
 import React from "react";
 import Image from "next/image";
+import { IBlog } from "../../../types";
+import { useInView } from "react-intersection-observer";
+
 import { motion } from "framer-motion";
 import { fadeUp } from "../Animations";
-import { useInView } from "react-intersection-observer";
-import { IBlog } from "../../../types";
+
 interface Props {
   data: IBlog;
 }
 
-const ArticleCard: React.FC<Props> = ({ data }) => {
+const BlogCard = ({ data }: Props) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
+
+  console.log(data);
 
   const { body, title, id, splash_image } = data;
 
@@ -23,8 +27,8 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
         variants={fadeUp}
         animate={inView ? "animate" : "initial"}
       >
-        <div className="relative flex my-4 md:flex-col lg:flex-row ">
-          <div className="relative w-60 h-60">
+        <div className="relative flex flex-col my-4 lg:flex-row ">
+          <div className="relative w-full md:w-72 h-60">
             <Image
               src={process.env.NEXT_PUBLIC_API_URL + splash_image[0].url}
               layout="fill"
@@ -33,10 +37,10 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
               priority={true}
             />
           </div>
-          <div className="px-4 w-60 h-60">
+          <div className="w-full px-0 py-2 lg:py-0 lg:px-4 md:w-72 lg:w-96 h-60">
             <h3 className="text-xl text-white">{title}</h3>
             <div className="justify-center py-2 my-2 text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-2/4 dark:text-light-bg">
-              {body.substring(0, 120)}...
+              {body.substring(0, 200)}...
             </div>
             <p className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">
               Read more
@@ -48,4 +52,4 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default ArticleCard;
+export default BlogCard;

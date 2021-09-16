@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { listMobile, overLay } from "../Animations";
 import MobileNav from "./MobileNav";
@@ -26,7 +27,7 @@ const Overlay: React.FC = () => {
     },
     {
       item: "Blog",
-      tag: "#blog",
+      tag: "/blog",
     },
   ];
 
@@ -68,7 +69,11 @@ const Overlay: React.FC = () => {
                 key={idx}
                 className={` text-light-bg dark:text-dark-bg text-lg font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
               >
-                <a href={item.tag}>{item.item}</a>
+                {item.tag === "/blog" ? (
+                  <Link href={item.tag}>{item.item}</Link>
+                ) : (
+                  <a href={item.tag}>{item.item}</a>
+                )}
               </motion.li>
             ))}
           </motion.ul>

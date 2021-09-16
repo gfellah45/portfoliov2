@@ -1,6 +1,24 @@
+import { useContext, useEffect } from "react";
 import Head from "next/head";
 import Landing from "../src/components/Landing";
-export default function Home() {
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { gql } from "@apollo/client";
+import client from "../graphql";
+import { BlogContext } from "../src/Context/Blog";
+import { fecthPost } from "../src/Context/actions";
+import { IBlog } from "../types";
+interface Props {
+  data: IBlog[];
+}
+
+export default function Home({ data }: Props) {
+  const { dispatch } = useContext(BlogContext);
+
+  useEffect(() => {
+    if (data) {
+      dispatch(fecthPost(data));
+    }
+  }, [data]);
   return (
     <>
       <Head>
@@ -23,3 +41,33 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query({
+    query: gql`
+      query getAllBlogs {
+        blogs {
+          id
+          title
+          body
+          published_at
+          splash_image {
+            url
+          }
+        }
+      }
+    `,
+  });
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data: data.blogs,
+    },
+  };
+};

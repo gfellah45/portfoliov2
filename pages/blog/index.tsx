@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Head from "next/head";
 import Contents from "../../src/components/Blog/Contents";
+import { gql } from "@apollo/client";
+import client from "../../graphql";
+import { GetStaticProps } from "next";
+import { BlogContext } from "../../src/Context/Blog";
+import { fecthPost } from "../../src/Context/actions";
+import { IBlog } from "../../types";
 
-interface Props {}
+interface Props {
+  data: IBlog[];
+}
 
-const index = (props: Props) => {
+const index = ({ data }: Props) => {
+  const { dispatch } = useContext(BlogContext);
+
+  useEffect(() => {
+    if (data) {
+      dispatch(fecthPost(data));
+    }
+  }, [data]);
   return (
     <div>
       <Head>
@@ -30,3 +45,33 @@ const index = (props: Props) => {
 };
 
 export default index;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query({
+    query: gql`
+      query getAllBlogs {
+        blogs {
+          id
+          title
+          body
+          published_at
+          splash_image {
+            url
+          }
+        }
+      }
+    `,
+  });
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data: data.blogs,
+    },
+  };
+};

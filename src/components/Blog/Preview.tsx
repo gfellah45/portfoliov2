@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -7,10 +7,10 @@ import { nameV, lineWidth, container } from "../Animations";
 import Container from "../../Container";
 import Heading from "../Elements/Heading";
 import ArticleCard from "./ArticleCard";
-
-interface Props {}
+import { BlogContext } from "../../Context/Blog";
 
 const Preview: FC = () => {
+  const { state } = useContext(BlogContext);
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -20,6 +20,7 @@ const Preview: FC = () => {
     threshold: 0.5,
     triggerOnce: true,
   });
+
   return (
     <div>
       <Heading
@@ -51,12 +52,12 @@ const Preview: FC = () => {
           initial="hidden"
           className="flex flex-col overflow-y-auto md:justify-between md:flex-row md:w-11/12"
         >
-          <ArticleCard />
-          <ArticleCard />
+          {state.blogs.map((item) => (
+            <ArticleCard key={item.id} data={item} />
+          ))}
         </motion.div>
       </Container>
     </div>
   );
 };
-
 export default Preview;
