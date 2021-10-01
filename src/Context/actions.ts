@@ -1,4 +1,4 @@
-import { IBlog } from "../../types";
+import { IBlog, BlogPreviewProps } from "../../types";
 
 export interface GetAllPost {
   type: "All_Blog_Post";
@@ -8,6 +8,11 @@ export interface GetAllPost {
 export interface GetSinglePost {
   type: "Single_Blog_Post";
   payload: IBlog;
+}
+
+export interface GetPostPreview {
+  type: "Blog_Post_Preview";
+  payload: BlogPreviewProps;
 }
 
 export const fecthPost = (post: IBlog[]): GetAllPost => ({
@@ -20,4 +25,9 @@ export const fetchSinglePost = (post: IBlog): GetSinglePost => ({
   payload: post,
 });
 
-export type BlogAction = GetAllPost | GetSinglePost;
+export const fetchPostPreview = (post: BlogPreviewProps): GetPostPreview => ({
+  type: "Blog_Post_Preview",
+  payload: post,
+});
+
+export type BlogAction = GetAllPost | GetSinglePost | GetPostPreview;

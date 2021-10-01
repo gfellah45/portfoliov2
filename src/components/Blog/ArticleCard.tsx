@@ -3,9 +3,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp } from "../Animations";
 import { useInView } from "react-intersection-observer";
-import { IBlog } from "../../../types";
+import { IBlog, BlogPreviewProps, IBlogList } from "../../../types";
+import Link from "next/link";
 interface Props {
-  data: IBlog;
+  data: IBlogList;
 }
 
 const ArticleCard: React.FC<Props> = ({ data }) => {
@@ -14,7 +15,7 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
     triggerOnce: true,
   });
 
-  const { body, title, id, splash_image } = data;
+  const { frontmatter, slug } = data;
 
   return (
     <>
@@ -26,21 +27,23 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
         <div className="relative flex my-4 md:flex-col lg:flex-row ">
           <div className="relative w-60 h-60">
             <Image
-              src={process.env.NEXT_PUBLIC_API_URL + splash_image[0].url}
+              src={frontmatter.cover_image}
               layout="fill"
               objectFit="cover"
-              alt={title}
+              alt={frontmatter.title}
               priority={true}
             />
           </div>
           <div className="px-4 w-60 h-60">
-            <h3 className="text-xl text-white">{title}</h3>
+            <h3 className="text-xl text-white">{frontmatter.title}</h3>
             <div className="justify-center py-2 my-2 text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-2/4 dark:text-light-bg">
-              {body.substring(0, 120)}...
+              {frontmatter.excerpt}...
             </div>
-            <p className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">
-              Read more
-            </p>
+            <Link href={`/blog/${slug}`}>
+              <p className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">
+                Read more
+              </p>
+            </Link>
           </div>
         </div>
       </motion.div>

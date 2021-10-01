@@ -2,23 +2,25 @@ import { useContext, useEffect } from "react";
 import Head from "next/head";
 import Landing from "../src/components/Landing";
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
-import { gql } from "@apollo/client";
-import client from "../graphql";
+
 import { BlogContext } from "../src/Context/Blog";
-import { fecthPost } from "../src/Context/actions";
-import { IBlog } from "../types";
+import { fecthPost, fetchPostPreview } from "../src/Context/actions";
+import { IBlog, BlogPreviewProps } from "../types";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 interface Props {
-  data: IBlog[];
+  post: BlogPreviewProps;
 }
 
-export default function Home({ data }: Props) {
+export default function Home({ post }: Props) {
   const { dispatch } = useContext(BlogContext);
 
   useEffect(() => {
-    if (data) {
-      dispatch(fecthPost(data));
+    if (post) {
+      dispatch(fetchPostPreview(post));
     }
-  }, [data]);
+  }, [post]);
   return (
     <>
       <Head>
@@ -43,31 +45,33 @@ export default function Home({ data }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query getAllBlogs {
-        blogs {
-          id
-          title
-          body
-          published_at
-          splash_image {
-            url
-          }
-        }
-      }
-    `,
-  });
+  const files = fs.readdirSync(path.join("posts"));
 
-  if (!data) {
+  if (!files) {
     return {
       notFound: true,
     };
   }
 
+  const post = files.map((file) => {
+    const slug = file.replace(".md", "");
+
+    const markdownMeta = files.map((file) => {
+      const filePath = path.join("posts", file);
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      return fileContent;
+    });
+
+    const { data: frontmatter } = matter(markdownMeta[0]);
+    return {
+      slug,
+      frontmatter,
+    };
+  });
+
   return {
     props: {
-      data: data.blogs,
+      post,
     },
   };
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { IBlog } from "../../../types";
+import { IBlog, IBlogList } from "../../../types";
 import { useInView } from "react-intersection-observer";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeUp } from "../Animations";
 
 interface Props {
-  data: IBlog;
+  data: IBlogList;
 }
 
 const BlogCard = ({ data }: Props) => {
@@ -18,7 +18,8 @@ const BlogCard = ({ data }: Props) => {
 
   console.log(data);
 
-  const { body, title, id, splash_image } = data;
+  const { slug, frontmatter } = data;
+  const { title, cover_image, excerpt, Date } = frontmatter;
 
   return (
     <>
@@ -30,10 +31,7 @@ const BlogCard = ({ data }: Props) => {
         <div className="relative flex flex-col my-4 lg:flex-row ">
           <div className="relative w-full md:w-72 h-60">
             <Image
-              src={
-                "https://blooming-gorge-90056.herokuapp.com" +
-                splash_image[0].url
-              }
+              src={cover_image}
               layout="fill"
               objectFit="cover"
               alt={title}
@@ -43,11 +41,13 @@ const BlogCard = ({ data }: Props) => {
           <div className="w-full px-0 py-2 lg:py-0 lg:px-4 md:w-72 lg:w-96 h-60">
             <h3 className="text-xl text-white">{title}</h3>
             <div className="justify-center py-2 my-2 text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-2/4 dark:text-light-bg">
-              {body.substring(0, 200)}...
+              {excerpt.substring(0, 200)}...
             </div>
-            <p className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">
-              Read more
-            </p>
+            <Link href={`/blog/${slug}`}>
+              <a className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">
+                Read more
+              </a>
+            </Link>
           </div>
         </div>
       </motion.div>

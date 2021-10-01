@@ -52,8 +52,8 @@ const Preview: FC = () => {
           initial="hidden"
           className="flex flex-col overflow-y-auto md:justify-between md:flex-row md:w-11/12"
         >
-          {state.blogs.map((item) => (
-            <ArticleCard key={item.id} data={item} />
+          {state.blogPreview.map((item, idx) => (
+            <ArticleCard key={idx} data={item} />
           ))}
         </motion.div>
       </Container>

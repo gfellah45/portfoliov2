@@ -8,7 +8,29 @@ export interface IBlog {
   }[];
 }
 
+export interface IBlogList {
+  frontmatter: {
+    Date: string;
+    cover_image: string;
+    excerpt: string;
+    title: string;
+  };
+  slug: string;
+  content?: string | any;
+}
+
+export type BlogPreviewProps = {
+  frontmatter: {
+    Date: string;
+    cover_image: string;
+    excerpt: string;
+    title: string;
+  };
+  slug: string;
+}[];
+
 export type InitialStateType = {
   blogs: IBlog[];
   singleBlog: IBlog | {};
+  blogPreview: BlogPreviewProps;
 };

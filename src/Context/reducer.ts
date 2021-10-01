@@ -17,6 +17,11 @@ export const reducer = (
         ...state,
         singleBlog: action.payload,
       };
+    case "Blog_Post_Preview":
+      return {
+        ...state,
+        blogPreview: action.payload,
+      };
 
     default:
       return state;
