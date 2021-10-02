@@ -35,7 +35,9 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     if (pathName) {
-      setNav([{ item: "Home", tag: "/" }, ...nav]);
+      setNav([{ item: "Home", tag: "/" }]);
+    } else {
+      setNav([...nav]);
     }
   }, [pathName]);
 

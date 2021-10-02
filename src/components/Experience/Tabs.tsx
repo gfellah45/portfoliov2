@@ -15,10 +15,10 @@ const Tabs: FC = () => {
                 <Tab
                   className={({ selected }) =>
                     classNames(
-                      "flex flex-col mb-2  p-2 dark:text-dark-bg md:text-md w-12/12 md:p-2 lg:p-3 text-sm lg:text-[14px] text-light-bg3 focus:outline-none",
+                      "flex flex-col mb-2  p-2 md:text-md w-12/12 md:p-2 lg:p-3 text-sm lg:text-[14px] text-light-bg3 focus:outline-none",
                       selected
-                        ? "bg-white dark:bg-dark-bg dark:text-white   backdrop-blur-lg backdrop-filter bg-opacity-20 font-semibold shadow-lg rounded-2xl "
-                        : " hover:bg-white/[0.11] hover:text-white hover:shadow-lg hover:rounded-2xl"
+                        ? "bg-white dark:bg-dark-bg dark:text-white backdrop-blur-lg backdrop-filter bg-opacity-20 font-semibold shadow-lg rounded-2xl "
+                        : " hover:bg-white/[0.11] dark:text-dark-bg hover:text-white hover:shadow-lg hover:rounded-2xl"
                     )
                   }
                   key={idx}

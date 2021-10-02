@@ -22,13 +22,17 @@ const SinglePost = ({ post }: Props) => {
         >
           Back
         </div>
-        <h1 className="text-3xl text-white">{post.frontmatter.title}</h1>
-        <span className="mt-10 text-white">
+        <h1 className="text-3xl text-dark-bg dark:text-white">
+          {post.frontmatter.title}
+        </h1>
+        <span className="mt-10 text-dark-bg dark:text-white">
           Date posted: {post.frontmatter.Date}
         </span>
         <div
-          className="my-6 text-lg text-white"
-          dangerouslySetInnerHTML={{ __html: marked(post.content) }}
+          className="my-6 text-lg text-dark-bg dark:text-white"
+          dangerouslySetInnerHTML={{
+            __html: marked(post.content, { gfm: true, breaks: true }),
+          }}
         ></div>
       </div>
     </div>

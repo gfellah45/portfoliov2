@@ -37,7 +37,7 @@ const ArticleCard: React.FC<Props> = ({ data }) => {
           <div className="px-4 w-60 h-60">
             <h3 className="text-xl text-white">{frontmatter.title}</h3>
             <div className="justify-center py-2 my-2 text-sm tracking-wide text-justify text-gray-600 lg:py-0 overflow-ellipsis h-2/4 dark:text-light-bg">
-              {frontmatter.excerpt}...
+              {frontmatter.excerpt.substring(0, 100)}...
             </div>
             <Link href={`/blog/${slug}`}>
               <p className="my-8 text-gray-500 underline cursor-pointer dark:text-light-bg">

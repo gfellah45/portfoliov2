@@ -11,11 +11,11 @@ Prerequisites: ReactJS-Basics, Typescript(with Interfaces), ES6 notation"
 In this article, you will be introduced to React Context, one of the latest features in React Applications.
 Prerequisites: ReactJS-Basics, Typescript(with Interfaces), ES6 notation
 
-## What is React context
+### What is React context
 
 React Context is a method to pass props from parent to child component(s), by storing the props in a store(similar in Redux) and using these props from the store by child component(s) without actually passing them manually at each level of the component tree.
 
-## Why React Context
+### Why React Context
 
 Using Redux to interact with states from parent to child components is not only quite difficult to understand but also gives you a more complex code. Through the usage of Context, the understanding of concept and code is far easier than that of Redux.
 

@@ -10,7 +10,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ title, duration, duties }) => {
   return (
     <div className="relative ">
-      <div className="absolute -inset-0.5 z-0 hover:blur-lg dark:bg-gradient-to-tr from-purple-700 to-red-600 rounded-2xl blur opacity-75"></div>
+      <div className="absolute z-0 transition-colors opacity-75 -inset-2 hover:blur-lg dark:bg-gradient-to-tr from-purple-700 to-red-600 rounded-2xl blur animate-pulse"></div>
       <div className="relative z-20 w-full p-4 my-3 origin-center bg-white border-b border-gray-200 transform-gpu dark:bg-dark-bg rounded-2xl lg:my-0 bg-opacity-20 backdrop-filter backdrop-blur-lg ">
         <div>
           <span className="text-sm text-white lg:text-lg">

@@ -43,7 +43,9 @@ const Overlay: React.FC = () => {
 
   useEffect(() => {
     if (pathName) {
-      setNav([{ item: "Home", tag: "/" }, ...nav]);
+      setNav([{ item: "Home", tag: "/" }]);
+    } else {
+      setNav([...nav]);
     }
   }, [pathName]);
 
@@ -73,7 +75,7 @@ const Overlay: React.FC = () => {
           <motion.ul
             variants={container}
             animate={header ? "animate" : "initial"}
-            className="flex flex-col items-center justify-between w-full lg:mt-0 xl:mt-0 h-4/6 lg:h-full xl:h-full lg:flex-row xl:flex-row"
+            className="flex flex-col items-center justify-between w-full h-full lg:mt-0 xl:mt-0 lg:h-full xl:h-full lg:flex-row xl:flex-row"
           >
             {nav.map((item, idx) => (
               <motion.li
@@ -83,7 +85,7 @@ const Overlay: React.FC = () => {
                 custom={idx}
                 animate={header ? "animate" : "initial"}
                 key={idx}
-                className={` text-light-bg dark:text-dark-bg text-lg font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
+                className={` text-light-bg my-4 dark:text-dark-bg text-5xl font-semibold transition-all ease-in-out transform-gpu  lg:text-text-heading2 hover:scale-120`}
               >
                 {item.tag === "/blog" ? (
                   <Link href={item.tag}>{item.item}</Link>

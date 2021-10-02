@@ -122,7 +122,7 @@ const ContactForm = (props: Props) => {
         animate={inView ? "animate" : "initial"}
         className="flex flex-col flex-wrap w-full pb-12 my-10 lg:flex-row "
       >
-        <div className="w-12/12 text-center md:text-center md:text-[80px] lg:text-left lg:w-6/12 py-4 font-medium  text-gray-800 text-[50px] lg:text-[77px] xl:text-[95px] dark:text-light-bg">
+        <div className="w-12/12 text-center bg-clip-text  from-white to-light-bg2 bg-gradient-to-b md:text-center md:text-[80px] lg:text-left lg:w-6/12 py-4 font-medium  text-gray-800 text-[50px] lg:text-[77px] xl:text-[95px] dark:text-transparent">
           Want to start a new project or work with me?
         </div>
 
